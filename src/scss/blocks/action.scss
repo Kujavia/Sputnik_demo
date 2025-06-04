@@ -1,0 +1,70 @@
+
+.action_container {
+    display: grid;
+    grid-template-columns: repeat(4, 10vw);
+    grid-template-rows: repeat(8, auto);
+    gap: 4%;
+    padding-top: 0px;
+    .action_container__scu, .action_container__date,.action_container__conditions {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 50% 40%;
+        grid-template-rows: repeat(2, auto);
+        gap: 6%;
+        border: 1px $frame_color2 solid;
+        padding: 12px;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .action_container__conditions{
+        grid-template-rows: repeat(3, auto);
+    }
+    .action_container__comment{
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 50% 40%;
+        grid-template-rows: repeat(2, 80px);
+        gap: 12px;
+        border: 1px $frame_color2 solid;
+        padding: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+.action_saveButton, .action_selectFileButton{
+    grid-column: span 4;
+}
+
+#action_saveButton, #action_templateButton, #action_export{
+    grid-column: span 4;
+    width: 180px;
+    height: 40px;
+    &:hover{
+        background-color: $hover-button;
+    }
+}
+#action_downloadButton{
+    width: 180px;
+    height: 40px;
+}
+
+
+#action_saveButton{
+    margin-left: 10%;
+    margin-top: 8px;
+    width: 250px;
+}
+
+
+#action_templateButton{
+    margin-top: 5%;
+}
+#action_scu, #action_date-creation, #action_date-start, #action_date-finish, #action_region, #action_mechanics, #action_discount{
+    height: 30px;
+}
+#action_addition, #action_user-comment{
+    border: 0.5px grey solid;
+    border-radius: 5px;
+}
+.action_selectFile{
+    grid-column: span 3;
+}

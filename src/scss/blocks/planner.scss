@@ -1,0 +1,62 @@
+// .planner_container{
+//     display: grid;
+//     grid-template-columns: repeat(2, 20vw);
+//     grid-template-rows: repeat(5, auto);
+//     gap: 2%;
+//     font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+//     // margin-left: 10%;
+// }
+
+// #planner_saveButton{
+//     width: 200px;
+//     height: 30px;
+//     margin: 10px;
+//     margin-left: 50%;
+//     &:hover{
+//         background-color: $hover-button;
+// }
+// }
+
+// #planner_Iframe{
+//     grid-column: span 2;
+//     margin-top: 10%;
+//     width: calc(100vw - 350px);
+//     height: 300px;
+// }
+
+// #planner_settingRepeat{
+//     width: 200px;
+//     height: 40px;
+//     margin: 10px;
+//     margin-left: 10%;
+//     &:hover{
+//         background-color: $hover-button;
+// }
+// }
+
+#planner_interval_num{
+    width: 50px;
+    height: 25px;
+}
+#planner_interval_str{
+    width: 125px;
+    height: 25px;
+}
+
+.select_ModalPlannerMonthlyDay{
+    display: flex;
+    #planner_dayNumber{
+        width: 70px;
+        height: 25px;
+        // margin: 2px;
+    }
+    #dayAndWeekMonth{
+        width: 70px;
+        height: 25px;
+        margin-left: 5px;// 
+    }
+}
+
+// #planner__scenarioName, #planner__block, #planner__scenarioCustom{
+//     height: 30px;
+// }

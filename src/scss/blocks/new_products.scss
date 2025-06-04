@@ -1,0 +1,82 @@
+// .new_product_container{
+//     display: grid;
+//     grid-template-columns: repeat(2, 30vw);
+//     grid-template-rows: repeat(3, auto);
+//     padding-top: 0px;
+//     column-gap: 5%;
+//     .new_product__forecast-wrapper{
+//         display: grid;
+//         grid-template-columns: 50% 50%;
+//         grid-template-rows: repeat(4, auto);
+//         column-gap: 10px;
+//         place-items: start;
+//         #new_product_method, #new_product_scenario{
+//             width: 240px;
+//             height: 30px;
+//         }
+//         .new_product_calculate{
+//             grid-column: span 2;
+//             place-items: start;
+//             #new_product_scenario{
+//                 margin-left: 20px;
+//                 width: 200px;
+//                 height: 30px;
+//             }
+//         }
+
+//         #new_product__calculateForecastButton, #new_product__optimizeButton, #new_product__exportButton{
+//             width: 200px;
+//             height: 40px;
+//             &:hover{
+//                 background-color: $cl-purple-light;
+//             }
+//         }
+       
+//     }
+// }
+
+// .new_product__aggregation-wrapper{
+//    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+//     border: 1px $frame_color2 solid;
+//     width: 100%;
+//     padding: 8px;
+//     // border-radius: 5px;
+//     .new_product__aggregation-title{
+//         text-align: center;
+//         font-weight: 700;
+//         margin-bottom: 10px;
+//     }
+//     .new_product__aggregation{
+//         display: grid;
+//         grid-template-columns: repeat(2, auto);
+//         grid-template-rows: repeat(4, auto);
+//         gap: 12px;
+//     }
+// }
+  
+
+// .new_product__preview{
+//     display: flex;
+//     flex-direction: column;
+//     margin-top: 20px;
+//     .new_product__results{
+//         display: flex;
+//         flex-direction: column;
+//         #new_product_resultsButton{
+//             width: 200px;
+//             height: 40px;
+//             margin: 10px;
+//             background-color: $cl-purple;
+//             margin-left: 70%;
+//             &:hover{
+//                 background-color: $hover-button;
+//             }
+//         }
+//         #new_product_PreviewIframe{
+//             margin-top: 50px;
+//             grid-column: span 2;
+//             width: calc(100vw - 350px);
+//             height: 460px;
+//         }
+//     }
+// }

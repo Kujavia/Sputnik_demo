@@ -1,0 +1,22 @@
+.page-content{
+  max-height: 100%;
+  overflow: auto;
+  padding: 1rem 1.5rem;
+  font-size: 12px;
+  font-weight: 400;
+  &__header{
+    margin-bottom: 1.6rem;
+    padding-bottom: 1.4rem;
+    color: $page-content-header-color;
+    padding-top: 1.4rem;
+    border-bottom: 1px solid $cl-border;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px !important;
+  }
+}
+
+.block_title{
+  font-size: 14px;
+  font-weight: 600;
+}

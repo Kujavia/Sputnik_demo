@@ -1,0 +1,114 @@
+// .summary_plan_contaier {
+//     display: grid;
+//     grid-template-columns: repeat(2, 30vw);
+//     column-gap: 50px;
+//     padding-top: 20px;
+
+//     .summary_plan_aggregate {
+//         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+//         display: grid;
+//         grid-template-columns: repeat(2, 1fr);
+//         grid-template-rows: repeat(5, 30px);
+//         align-items: center;
+//         // max-width: 400px;
+//         gap: 5px;
+//         row-gap: 5%;
+//         border: 1px $frame_color2 solid;
+//         padding: 8px;
+
+//         .summary_plan__aggregation-title {
+//             grid-column: span 2;
+//             text-align: center;
+//             font-weight: 700;
+//         }
+//     }
+// }
+
+// .summary_plan_calculation {
+//     display: grid;
+//     grid-template-columns: 50% 50%;
+//     grid-template-rows: repeat(4, auto);
+//     gap: 5px;
+//     align-items: center;
+// }
+
+// #summary_plan_time,
+// #summary_plan_groupSCU,
+// #summary_plan_geography,
+// #summary_plan_scu,
+// #summary_plan_method,
+// #summary_plan_scenario {
+//     width: 100%;
+//     height: 30px;
+//     margin-top: 2%;
+// }
+
+// #summary_plan__cannibalization, #summary_plan__regAssort, #summary_plan__promo, #summary_plan__newsProducts {
+//     margin-left: 2%;
+//     width: 20px;
+//     height: 20px;
+//     margin-top: 5px;
+// }
+
+// #summary_plan__calculateForecastButton,
+// #summary_plan_exportButton,
+// #summary_plan_importButton,
+// #summaryPlan__optimizButton {
+//     width: 200px;
+//     height: 40px;
+//     margin-top: 10px;
+
+//     &:hover {
+//         background-color: $hover-button;
+//     }
+// }
+
+// #summary_plan_saveButton {
+//     grid-column: span 4;
+//     width: 180px;
+//     height: 35px;
+//     margin-left: 580px;
+//     margin-top: 50px;
+
+//     &:hover {
+//         background-color: $hover-button;
+//     }
+// }
+
+// #summary_plan_previewButton {
+//     grid-column: span 2;
+//     margin-top: 30px;
+//     width: 200px;
+//     height: 40px;
+//     background-color: $button_preview_color;
+//     border: 1px $second-color solid;
+//     margin-left: 90%;
+
+//     &:hover {
+//         background-color: $hover-button;
+//     }
+// }
+
+// #summaryPlan_PreviewIframe {
+//     margin-top: 50px;
+//     grid-column: span 2;
+//     width: calc(100vw - 350px);
+//     height: 460px;
+
+// }
+
+// .labelSummary {
+//     display: flex;
+//     align-items: center;
+//     padding: 10px;
+//     cursor: pointer;
+//     justify-content: space-between;
+// }
+
+// #summary_plan__newsProducts,
+// #summary_plan__cannibalization,
+// #summary_plan__promo,
+// #summary_plan__regAssort {
+//     margin-left: 25px;
+//     /* Отступ между текстом и чекбоксом */
+// }

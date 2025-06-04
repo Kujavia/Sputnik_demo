@@ -1,0 +1,647 @@
+<div class="page__content page-content data-page">
+  <header class="page-content__header">
+    <p>Глобальные параметры</p>
+  </header>
+
+  <div class="parameters_container">
+    <!-- старая агрегация -->
+    <!-- <section class="parameters_aggregation-wrapper">
+    <p class="parameters_aggregation-title block_title">Агрегация данных</p>
+    <div class="parameters_aggregation">
+      <label for="parameters_aggregation-time">Агрегат по времени</label>
+      <select id="parameters_aggregation-time" class="form-select">
+        <option value="globalParamTimeNot">Не установлено</option>
+        <option value="globalParamTimeDay">День</option>
+        <option value="globalParamTimeWeek" selected >Неделя</option>
+        <option value="globalParamTimeQuarter">Квартал</option>
+        <option value="globalParamTimeMonth">Месяц</option>
+      </select>
+      <label for="parameters_aggregation-geo">Агрегат по географии</label>
+      <select id="parameters_aggregation-geo" class="form-select">
+        <option value="globalParamGeoNot">Не установлено</option>
+        <option value="globalParamGeoChain" selected>Сеть</option>
+        <option value="globalParamGeoCountry">Страна</option>
+        <option value="globalParamGeoRegion">Регион</option>
+        <option value="globalParamGeoCity">Город</option>
+        <option value="globalParamGeoStore">Магазин</option>
+      </select> 
+      <label for="parameters_aggregation-scu">Агрегат по позиции</label>
+      <select id="parameters_aggregation-scu" class="form-select">
+        <option value="globalParamSkuNot">Не установлено</option>
+        <option value="globalParamTypeProduct">Категория</option>
+        <option value="globalParamSku" selected>SKU</option>
+      </select>
+    </div>
+  </section> -->
+
+    <!-- новая агрегация -->
+    <div class="card border rounded-3 shadow-sm" style="width: 100%">
+      <div class="card-body" id="parameters_promo-method">
+        <h5 class="card-title block_title">Агрегация данных</h5>
+        <div class="parameters_aggregation mt-3">
+          <div class="mb-3">
+            <label for="parameters_aggregation-time" class="form-label">Агрегат по времени</label>
+            <select
+              id="parameters_aggregation-time"
+              class="form-select"
+            >
+              <option value="globalParamTimeNot" disabled>Не установлено</option>
+              <option value="globalParamTimeDay" disabled>День</option>
+              <option value="globalParamTimeWeek" selected>Неделя</option>
+              <option value="globalParamTimeQuarter" disabled>Квартал</option>
+              <option value="globalParamTimeMonth" disabled>Месяц</option>
+            </select>
+          </div>
+          <div class="mb-3">
+          <label for="parameters_aggregation-geo" class="form-label">Агрегат по географии</label>
+            <select
+              id="parameters_aggregation-geo"
+              class="form-select"
+            >
+              <option value="globalParamGeoNot">Не установлено</option>
+              <option value="globalParamGeoChain" selected>Сеть</option>
+              <option value="globalParamGeoCountry" disabled>Страна</option>
+              <option value="globalParamGeoRegion" disabled>Регион</option>
+              <option value="globalParamGeoCity" disabled>Город</option>
+              <option value="globalParamGeoStore" disabled>Магазин</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="parameters_aggregation-scu" class="form-label">Агрегат по позиции</label>
+            <select
+              id="parameters_aggregation-scu"
+              class="form-select"
+            >
+              <option value="globalParamSkuNot" disabled>Не установлено</option>
+              <option value="globalParamTypeProduct" disabled>Категория</option>
+              <option value="globalParamSku" selected>SKU</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <section class="parameters_promo-wrapper">
+    <p class="parameters_promo-title">Очистка от промо</p>
+    <div class="parameters_promo">
+      <label for="parameters_promo-method">Метод очистки</label>
+      <select id="parameters_promo-method" class="form-select">
+        <option value="globalParamPromoNot" selected>Не установлено</option>
+        <option value="globalParamPromoMethodEmptyValue">Пустое значение</option>
+      </select>
+    </div>
+  </section> -->
+
+    <div class="card border rounded-3 shadow-sm" style="width: 100%">
+      <div class="card-body" id="parameters_promo-method">
+        <h5 class="card-title block_title">Очистка от промо</h5>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultPromo"
+            id="flexRadioDefaultPromo1"
+            value="globalParamPromoNot"
+            value="globalParamPromoNot"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefaultPromo1">
+            Не установлено
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultPromo"
+            id="flexRadioDefaultPromo2"
+            value="globalParamPromoMethodEmptyValue"
+          />
+          <label
+            class="form-check-label"
+            for="flexRadioDefaultPromo2"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip"
+          >
+            Исключение промо продаж
+          </label>
+        </div>
+        <div class="form-check border-top">
+          <input
+            class="form-check-input mt-4"
+            type="radio"
+            name="flexRadioDefaultPromoMarkup"
+            id="flexRadioDefaultPromo3"
+            value="globalParamPromoUploadedMarkup"
+          />
+          <label class="form-check-label mt-4" for="flexRadioDefaultPromo3">
+            Загруженная разметка
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultPromoMarkup"
+            id="flexRadioDefaultPromo4"
+            value="globalParamPromoAutoMarkup"
+          />
+          <label class="form-check-label" for="flexRadioDefaultPromo4">
+            Авторазметка
+          </label>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="100-2=98% z коэффициент для стандартного отклонения"
+              >Порог промо</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="2%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- от сезонности новая-->
+    <div class="card border rounded-3 shadow-sm" style="width: 100%">
+      <div class="card-body" id="parameters_season-method">
+        <h5 class="card-title block_title">Очистка от сезонности</h5>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="globalParamSeasonFluctuationСoeff"
+            id="flexCheckDefaultSeason"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Коэффициенты колебания
+          </label>
+          <select
+            id="parameters_seasonCoeff"
+            class="form-select"
+          >
+            <!-- <option value="Не установлено" selected>Не установлено</option> -->
+            <!-- <option value="Колебания от средней">Колебания от средней</option> -->
+            <!-- <option value="Колебания от тренда">Колебания от тренда</option> -->
+            <option value="По средней#2" selected>По средней#2</option>
+            <option value="Коэффициенты по тренду#1">Коэффициенты по тренду#1</option>
+          </select>
+        </div>
+
+        <!-- <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefaultSeason" id="flexRadioDefaultSeason1" value="globalParamSeasonFluctuationСoeff" >
+        <label class="form-check-label" for="flexRadioDefaultSeason1">
+          Коэффициенты колебания
+        </label>
+      </div> -->
+
+      <a id="linkToSeasonality" class="icon-link icon-link-hover d-inline-flex align-items-baseline" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#">
+        Коэффициенты
+        <i class="bi bi-arrow-right"></i>
+      </a>
+      </div>
+    </div>
+
+    <!-- старая версия Всплески -->
+    <!-- <section class="parameters_spikes">
+    <p class="parameters_spikes-title">Очистка от всплесков продаж</p>
+    <div class = "parameters_spikes--wrap">
+    <label for="parameters_spikes-method">Метод очистки</label>
+    <select id="parameters_spikes-method" class="form-select">
+      <option value="globalParamSpikesMethodNot" selected>Не установлено</option>
+      <option value="globalParamSpikesMethodInterquartile">Интерквартиль</option>
+      <option value="globalParamSpikesMethodStandardDeviation">Стандартное отклонение</option>
+    </select>
+  </div>
+  </section> -->
+
+    <!-- новая версия Всплески -->
+    <div class="card border rounded-3 shadow-sm" style="width: 100%">
+      <div class="card-body" id="parameters_spikes-method">
+        <h5 class="card-title block_title">Очистка от всплесков продаж</h5>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultSpikes"
+            id="flexRadioDefaultSpikes1"
+            value="globalParamSpikesMethodNot"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefaultSpikes1">
+            Не установлено
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultSpikes"
+            id="flexRadioDefaultSpikes2"
+            value="globalParamSpikesMethodStandardDeviation"
+          />
+          <label class="form-check-label" for="flexRadioDefaultSpikes2">
+            Стандартное отклонение
+          </label>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Период(неделя, месяц, квартал) по которому ведется расчет"
+              >Период</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="3"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Нижняя и верхняя граница в стандартных отклонениях от средней. Чем больше значение - тем больше свободы продаж"
+              >σ НГ</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="2"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">σ ВГ</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="2"
+            />
+          </div>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultSpikes"
+            id="flexRadioDefaultSpikes3"
+            value="globalParamSpikesMethodInterquartile"
+          />
+          <label class="form-check-label" for="flexRadioDefaultSpikes3">
+            Интерквартиль
+          </label>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Период(неделя, месяц, квартал) по которому ведется расчет"
+              >Период</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="4"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Нижняя и верхняя граница в интерквартиле от первого квартиля и третьего. Чем больше значение - тем больше свободы продаж"
+              >IQR НГ</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="1.5"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm"
+              >IQR ВГ</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-describedby="inputGroup-sizing-sm"
+              value="1"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <section class="parameters_oos-wrapper">
+    <p class="parameters_oos-title">Очистка от OOS</p>
+    <div class="parameters_oos">
+      <label for="parameters_oos-method">Метод очистки</label>
+      <select id="parameters_oos-method" class="form-select">
+        <option value="globalParamOosNot" selected>Не установлено</option>
+        <option value="globalParamOosAverageBalance">По среднему остатку</option>
+        <option value="globalParamOosAmountBalance">По сумме остатка</option>
+        <option value="globalParamOosShareStore">По доле ТТ</option>
+        <option value="globalParamOosDaysRemaining">По кол-ву дней с остатком</option>
+      </select>
+    </div>
+  </section> -->
+
+    <div class="card border rounded-3 shadow-sm" style="width: 100%">
+      <div class="card-body" id="parameters_oos-method">
+        <h5 class="card-title block_title">Очистка от OOS</h5>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultOOS"
+            id="flexRadioDefault1"
+            value="globalParamOosNot"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Не установлено
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultOOS"
+            id="flexRadioDefault2"
+            value="globalParamOosAverageBalance"
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            По среднему остатку
+          </label>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Среднее в день за период(неделя, месяц, квартал). Если средний остаток в расчитываемый период меньше, чем установленное значение"
+              >Минимальное значение</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="0.6"
+            />
+          </div>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultOOS"
+            id="flexRadioDefault3"
+            value="globalParamOosAmountBalance"
+          />
+          <label class="form-check-label" for="flexRadioDefault3">
+            По сумме остатка
+          </label>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text custom-tooltip"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Сумма за период(неделя, месяц, квартал). Если сумма остатка в расчитываемый период меньшее чем установленное значение"
+              >Минимальное значение</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="7"
+            />
+          </div>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultOOS"
+            id="flexRadioDefault4"
+            value="globalParamOosShareStore"
+          />
+          <label class="form-check-label" for="flexRadioDefault4">
+            По доле ТТ
+          </label>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Доля ТТ где остаток SKU >0 по дням. Среднее значение доли за период(неделя, месяц, квартал) Если среднее значение доли за период меньше чем установленное значение"
+              >Доля ТТ с остатком</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="50%"
+            />
+          </div>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultOOS"
+            id="flexRadioDefault5"
+            value="globalParamOosDaysRemaining"
+          />
+          <label class="form-check-label" for="flexRadioDefault5">
+            По кол-ву дней с остатком
+          </label>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Доля дней где остаток >0 за период(неделя, месяц,квартал). Если расчитанная доля за период меньше чем установленное значение"
+              >Доля дней с остатком</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="50%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- старая версия Восстановление -->
+    <!-- <section class="container_parameters_sales_recovery" class="form-select">
+    <p class="parameters_oos-title">Восстановление продаж</p>
+    <div class="parameters_oos">
+      <label for="parameters_oos-method">Метод очистки</label>
+      <select id="parameters_sales_recovery-method" class="form-select">
+        <option value="globalParamSpikesMethodNot" selected>Не установлено</option>
+        <option value="option2">Как тренд</option>
+        <option value="globalParamSpikesMethodStandardDeviation">Как среднее</option>
+      </select>
+    </div>
+  </section> -->
+
+    <!-- новая версия Восстановление -->
+    <div class="card border rounded-3 shadow-sm" style="width: 100%">
+      <div class="card-body" id="parameters_sales_recovery-method">
+        <h5 class="card-title block_title">Восстановление продаж</h5>
+        <div class="form-check mt-3">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultRecovery"
+            id="flexRadioDefaultRecovery1"
+            value="globalParamRecoveryMethodNot"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefaultRecovery1">
+            Не установлено
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultRecovery"
+            id="flexRadioDefaultRecovery2"
+            value="globalParamRecoveryMethodTrend"
+          />
+          <label class="form-check-label" for="flexRadioDefaultRecovery2">
+            Как среднее
+          </label>
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Период(неделя, месяц, квартал) по которому ведется расчет"
+              >Период</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="4"
+            />
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span
+              class="input-group-text"
+              id="inputGroup-sizing-sm"
+              data-bs-toggle="tooltip"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Смещение периода на количество значений (может быть как и + так и -). У краев данных происходит дополнительное смещение что бы покрыть весь заданный период"
+              >Сдвиг</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="1"
+            />
+          </div>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultRecovery"
+            id="flexRadioDefaultRecovery3"
+            value="globalParamRecoveryMethodAverage"
+          />
+          <label class="form-check-label" for="flexRadioDefaultRecovery3">
+            Как тренд
+          </label>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm"
+              >Период</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Пример размера поля ввода"
+              aria-describedby="inputGroup-sizing-sm"
+              value="5"
+            />
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm"
+              >Сдвиг</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-describedby="inputGroup-sizing-sm"
+              value="1"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="container_parameters_buttonSave">
+      <span id="check-mark_button">✔️ сохранено</span>
+      <button
+        type="button"
+        class="btn btn-primary"
+        style="width: 20%; height: 30px"
+        onclick="saveSelectedGlobalParameters()"
+        id="parameters_saveButton"
+      >
+        Сохранить
+      </button> 
+    </section>
+  </div>
+</div>

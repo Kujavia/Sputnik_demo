@@ -1,0 +1,28 @@
+.form-check-input{
+  &:checked{
+    background-color: $cl-purple;
+    border-color: $cl-purple;
+  }
+  &:focus{
+    border-color: $cl-purple;
+    box-shadow: 0 0 0 .2rem $cl-purple-light;
+  }
+}
+
+.form-control, .form-select{
+  &:focus{
+    border-color: $cl-purple;
+    box-shadow: 0 0 0 .2rem $cl-purple-light;
+  }
+}
+
+.form-switch{
+  .form-check-input {
+    &:focus{
+      --bs-form-switch-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%233337a2'/%3e%3c/svg%3e");
+      &:checked{
+        --bs-form-switch-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+      }
+    } 
+  }
+}

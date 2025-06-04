@@ -1,0 +1,89 @@
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  //  background: linear-gradient(to top right, $second-color, #00008B);
+  height: 105px;
+  padding: 0 10px;
+  border-start-end-radius: 15px;
+  border-top-left-radius: 15px; 
+  color: $white;
+  font-size: 0.8rem;
+  width: 100vw;
+  // width: 100%;
+  // @media (min-width: 1920px) {
+  //   width: 1665px;
+  //  }
+  //  @media (min-width: 2560px) {
+  //   width: 1665px;
+  //  }
+ 
+
+   
+
+  
+  &__logo {
+    display: flex; 
+    align-items: center;
+    padding: 10px;
+    }
+    
+  
+    &__nav {
+      margin-right: 10vw;
+      &-list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        // justify-content: start;
+      }
+      &-item {
+        margin-left: 5%;
+      }
+      &-link {
+        color: $white;
+        text-decoration:none;
+        display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
+        line-height: 1; /*Задаём высоту строки в пикселях)*/
+        // font-weight: bold;
+        font-size: 1rem;
+        font-family: $main-font;
+      }
+      &-link:hover {
+        color: $accent-color;
+        // text-decoration: underline;
+      }
+      &-link:after {
+        display: block; /*превращаем его в блочный элемент*/
+        content: ""; 
+        height: 1px;
+        width: 0%;
+        background-color:$accent-color;
+        transition: width 0.4s ease-in-out; 
+        }
+        &-link:hover:after{
+          width: 100%;
+        }
+
+    }
+}
+
+a:hover{ text-decoration-color: $primary-color;} /*перебила подчеркивание из установок*/
+
+#header_top__logo-img {
+    max-width: 60px; 
+    height: auto; 
+    margin-right: 10px; 
+    border-radius: 10px;
+}
+
+.header_top__logo-text {
+    font-size: 24px;
+    color: $accent-color;
+    font-weight: bold;
+}
+
+#header_top_user{
+  margin-left: 5px;
+}

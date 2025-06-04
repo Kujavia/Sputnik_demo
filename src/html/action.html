@@ -1,0 +1,301 @@
+<div class="page__content page-content data-page">
+  <header class="page-content__header">
+    <p>Акции</p>
+  </header>
+
+  <div class="row border border-1 rounded-4 mx-1 shadow-sm">
+    <!-- Левый блок: Агрегация выходных данных -->
+    <div class="col-md-6 p-0">
+      <!-- <div class="card"> -->
+      <div class="card-body">
+        <h5 class="card-title block_title mb-3">Агрегация выходных данных</h5>
+        <div class="mb-3">
+          <label for="regular_assort__aggregation-time" class="form-label"
+            >Позиция</label
+          >
+          <select
+            id="regular_assort__aggregation-time"
+            class="form-select"
+          >
+            <option value="option1">SKU1</option>
+            <option value="option2">SKU2</option>
+            <option value="option3">SKU3</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="dateAction" class="form-label">Дата создания</label>
+          <input type="date" class="form-control" id="dateAction" />
+        </div>
+        <div class="mb-3">
+          <label for="regular_assort__aggregation-scu" class="form-label"
+            >Территория</label
+          >
+          <select
+            id="regular_assort__aggregation-scu"
+            class="form-select"
+          >
+            <option value="not_selected">Не установлено</option>
+            <option value="option2">Регион1</option>
+            <option value="option2">Регион2</option>
+            <option value="option2">Регион3</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="regular_assort__aggregation-scu" class="form-label"
+            >Механика акции</label
+          >
+          <select
+            id="regular_assort__aggregation-scu"
+            class="form-select"
+          >
+            <option value="not_selected">1+1</option>
+            <option value="option2">Клубная программа</option>
+            <option value="option2">Блогеры</option>
+            <option value="option2">Подарок</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="regular_assort__aggregation-scu" class="form-label"
+            >% скидки</label
+          >
+          <select
+            id="regular_assort__aggregation-scu"
+            class="form-select"
+          >
+            <option value="not_selected">10%</option>
+            <option value="option2">20%</option>
+            <option value="option2">30%</option>
+            <option value="option2">40%</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="input-group mb-1">
+              <span class="input-group-text">Период прогноза</span>
+              <input
+                id="period"
+                type="text"
+                class="form-control"
+                value="4"
+                aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)"
+              />
+              <span class="input-group-text">нед</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <span class="input-group-text">Лаг прогноза</span>
+              <input
+                type="text"
+                class="form-control"
+                value="1"
+                aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)"
+              />
+              <span class="input-group-text">нед</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+
+    <!-- Правый блок: Метод прогнозирования и сценарий расчета -->
+    <div class="col-md-6 d-flex flex-column p-0">
+      <!-- <div class="card"> -->
+      <div class="card-body flex-fill">
+        <h5 class="card-title block_title mb-3"></h5>
+        <!-- <div class="mb-3">
+            <label for="regular_assort_method" class="form-label"
+              >Метод прогнозирования</label
+            >
+            <div class="input-group">
+              <input
+                id="regular_assort_method"
+                type="text"
+                class="form-control"
+                placeholder=""
+                aria-describedby="button-addon1"
+              />
+              <button
+                class="btn btn-outline-primary"
+                type="button"
+                id="button-addon1"
+                onclick="openModal_MethodForecastRA()"
+              >
+                Настроить
+              </button>
+            </div>
+          </div> -->
+        <div class="">
+          <div class="mb-3">
+
+            <label for="dateActionStart" class="form-label"
+            >Дата начала акции</label
+            >
+            <input type="date" class="form-control" id="dateActionStart" />
+          </div>
+            <div class="mb-3">
+
+            <label for="dateActionFinish" class="form-label"
+            >Дата окончания акции</label
+            >
+            <input type="date" class="form-control" id="dateActionFinish" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label" >Дополнительные сведения</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+          </div>
+          <div class="mb-3">
+
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Комментарий ответственного</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+          </div>
+          <div class="row mt-5">
+            <div class="col-4">
+              <button
+                type="button"
+                class="btn btn-outline-primary w-100"
+                onclick="scenariosSaveOpen();"
+              >
+                Сохранить изменения
+              </button>
+            </div>
+            <div class="col-4">
+              <button
+                type="button"
+                class="btn btn-outline-secondary w-100"
+                onclick=""
+              >
+                Скачать шаблон
+              </button>
+            </div>
+            <div class="col-4">
+              <button
+                type="button"
+                class="btn btn-primary w-100"
+                onclick=""
+                id="regular_assort__calculateForecastButton"
+              >
+                Рассчитать прогноз
+              </button>
+            </div>
+          </div>
+          <label class="mt-5" for="action_selectFile">
+            Загрузить данные, используя .xslx
+            <input
+              type="file"
+              id="action_selectFile"
+              name="action_selectFile"
+              accept=".xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ***////////////////// -->
+<!-- 
+<div class="action_container">
+  <section class="action_container__scu">
+    <label for="action_scu">Позиция</label>
+    <select id="action_scu">
+      <option value="option1">SKU1</option>
+      <option value="option2">SKU2</option>
+      <option value="option3">SKU3</option>
+    </select>
+    <label for="action_date-creation">Дата создания</label>
+    <input
+      type="date"
+      id="action_date-creation"
+      name="action_date-creation"
+      required
+    />
+  </section>
+
+  <section class="action_container__date">
+    <label for="action_date-start">Дата начала акции</label>
+    <input
+      type="date"
+      id="action_date-start"
+      name="action_date-start"
+      required
+      min="2023-01-01"
+    />
+    <label for="action_date-finish">Дата окончания акции</label>
+    <input
+      type="date"
+      id="action_date-finish"
+      name="action_date-finish"
+      required
+      min="2023-01-01"
+    />
+  </section>
+
+  <section class="action_container__conditions">
+    <label for="action_region">Территория</label>
+    <select id="action_region">
+      <option value="option1">Регион1</option>
+      <option value="option2">Регион2</option>
+      <option value="option3">Регион3</option>
+    </select>
+
+    <label for="action_mechanics">Механика акции</label>
+    <select id="action_mechanics">
+      <option value="option1">1+1</option>
+      <option value="option2">Клубная программа</option>
+      <option value="option3">Блогеры</option>
+      <option value="option4">Подарок</option>
+    </select>
+
+    <label for="action_discount">% скидки</label>
+    <select id="action_discount">
+      <option value="option1">10%</option>
+      <option value="option2">20%</option>
+      <option value="option3">30%</option>
+      <option value="option4">40%</option>
+      <option value="option4">50%</option>
+    </select>
+  </section>
+
+  <section class="action_container__comment">
+    <label for="action_addition" class="action_addition"
+      >Дополнительное описание</label
+    >
+    <input type="text" id="action_addition" name="action_addition" />
+
+    <label for="action_user-comment">Комментарий ответственного</label>
+    <input type="text" id="action_user-comment" name="action_user-comment" />
+  </section>
+
+  сохранить
+  <section class="action_saveButton">
+    <button onclick="" id="action_saveButton">Сохранить изменения</button>
+    <span id="check-mark_button">✔️ сохранено</span>
+  </section>
+  <button id="action_templateButton">Скачать шаблон</button>
+
+  <div class="action_selectFile">
+    <label for="action_selectFile">
+      Загрузить данные, используя .xslx
+      <input
+        type="file"
+        id="action_selectFile"
+        name="action_selectFile"
+        accept=".xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      />
+    </label>
+    <button id="action_downloadButton">Загрузить файл</button>
+  </div>
+</div> -->

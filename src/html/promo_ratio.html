@@ -1,0 +1,286 @@
+<!-- новая версия -->
+<div class="page__content page-content data-page">
+  <header class="page-content__header">
+    <p>Промо коэффициенты</p>
+  </header>
+
+  <div class="row border border-1 rounded-4 mx-1 shadow-sm">
+    <!-- Левый блок: Агрегация выходных данных -->
+    <div class="col-md-6 p-0">
+      <!-- <div class="card"> -->
+      <div class="card-body">
+        <h5 class="card-title block_title mb-3">Агрегация выходных данных</h5>
+
+        <div class="mb-3">
+          <label for="regular_assort__aggregation-geo" class="form-label"
+            >Агрегат по географии</label
+          >
+          <select id="regular_assort__aggregation-geo" class="form-select">
+            <option value="not_selected">Не установлено</option>
+            <option value="chain" selected>Сеть</option>
+            <option value="option2">Страна</option>
+            <option value="option3">Регион</option>
+            <option value="option4">Город</option>
+            <option value="option5">Магазин</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="regular_assort__aggregation-scu" class="form-label"
+            >Агрегат по позиции</label
+          >
+          <select id="regular_assort__aggregation-scu" class="form-select">
+            <option value="not_selected">Не установлено</option>
+            <option value="option2">Категория</option>
+            <option value="option2" selected>SKU</option>
+          </select>
+        </div>
+
+        <div class="form-check custom-checkbox ml-1" id="methods-cleaning">
+          <input
+            class="form-check-input main-checkbox"
+            type="checkbox"
+            id="additional-metrics"
+            data-group="metrics"
+          />
+          <label class="form-check-label" for="additional-metrics"
+            >Дополнительные показатели</label
+          >
+        </div>
+        <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+          <input
+            class="form-check-input sub-checkbox"
+            type="checkbox"
+            id="abc-metrics"
+            data-group="metrics"
+          />
+          <label class="form-check-label" for="abc-metrics">ABC</label>
+        </div>
+        <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+          <input
+            class="form-check-input sub-checkbox"
+            type="checkbox"
+            id="xyz-metrics"
+            data-group="metrics"
+          />
+          <label class="form-check-label" for="xyz-metrics">XYZ</label>
+        </div>
+        <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+          <input
+            class="form-check-input sub-checkbox"
+            type="checkbox"
+            id="price-segment"
+            data-group="metrics"
+          />
+          <label class="form-check-label" for="price-segment"
+            >Ценовой сегмент</label
+          >
+        </div>
+        <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+          <input
+            class="form-check-input sub-checkbox"
+            type="checkbox"
+            id="promo-mechanics"
+            data-group="metrics"
+          />
+          <label class="form-check-label" for="promo-mechanics"
+            >Механика акции</label
+          >
+        </div>
+        <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+          <input
+            class="form-check-input sub-checkbox"
+            type="checkbox"
+            id="brand-metrics"
+            data-group="metrics"
+          />
+          <label class="form-check-label" for="brand-metrics">Бренд</label>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+
+    <!-- Правый блок: Метод прогнозирования и сценарий расчета -->
+    <div class="col-md-6 d-flex flex-column p-0">
+      <div class="card-body flex-fill">
+        <h5 class="card-title block_title mb-3">Настройки разметки</h5>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultSpikes"
+            id="promoRatioMarkup"
+            value="method7"
+          />
+          <label class="form-check-label" for="promoRatioMarkup"
+            >Загруженная разметка</label
+          >
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefaultSpikes"
+            id="promoRatioMarkup"
+            value="method8"
+          />
+          <label class="form-check-label" for="modalMethod8"
+            >Авторазметка</label
+          >
+          <div class="input-group input-group-sm mb-1">
+            <span class="input-group-text">Порог промо</span>
+            <input type="text" class="form-control" value="2%" />
+          </div>
+        </div>
+        <div class="mb-3">
+          <h5 class="card-title block_title mb-3">Настройка расчёта</h5>
+          <div class="input-group input-group-sm mb-1">
+            <span class="input-group-text">Верхняя граница</span>
+            <input type="text" class="form-control" value="2" />
+          </div>
+          <div class="input-group input-group-sm mb-1">
+            <span class="input-group-text">Нижняя граница</span>
+            <input type="text" class="form-control" value="1" />
+          </div>
+        </div>
+
+        <label class="form-label" for="seasonality_scenario"
+          >Метод агрегации коэффициентов</label
+        >
+        <select
+          id="promoRatio_method"
+          placeholder="Выберите из списка"
+          class="mb-2 form-select"
+        >
+          <!-- <option value="" >Не выбрано</option> -->
+          <option value="average" selected>Средняя</option>
+          <option value="mediana">Медиана</option>
+        </select>
+
+        <div class="form-check form-switch mb-3 seasonality_pre-smoothing">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="smothingPromoRatio"
+            checked
+          />
+          <label class="form-check-label" for="smothingPromoRatio"
+            >Cглаживание</label
+          >
+        </div>
+
+        <label for="seasonality_scenario" class="form-label">Выбрать коэффициенты</label>
+        <select
+          id="seasonality_scenario"
+          placeholder="Выберите из списка"
+          class="form-select"
+        >
+          <option value="" disabled selected>Выберите из списка</option>
+          <option value="1">Кэф без ограничений#1</option>
+          <option value="2">Кэф по авторазметке#2</option>
+          <option value="2">Пользовательские</option>
+        </select>
+        <div class="seasonality_buttons">
+          <button
+            type="button"
+            class="btn btn-outline-primary outline-primary-project"
+            style="width: 43%"
+            onclick="scenariosSaveOpen();"
+          >
+            Сохранить коэффициенты
+          </button>
+          <button
+            id="promoRatio_calculation"
+            type="button"
+            class="btn btn-primary"
+            style="width: 43%"
+            _onclick="tbPromoRatioPerviewButton()" id="promoRatio__calculateForecastButton"
+          >
+            Рассчитать коэффициенты
+          </button>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <div class="row border border-1 rounded-4 mx-1 shadow-sm mt-4 p-3">
+    <!-- Заголовок -->
+    <div class="d-flex justify-content-between align-items-start w-100">
+      <p class="fw-bold mb-0 fs-5">Аналитические показатели</p>
+      <a
+        id="download"
+        href="#"
+      >
+        Скачать
+      </a>
+    </div>
+    <div id="chart" style="height: 400px;"></div>
+  </div>
+  <!-- <div id="download-container" class="d-none pt-2 pb-2 text-end">
+    <a id="download" href="#" class="text-primary" style="font-size: 14px;">Скачать таблицу</a>
+  </div> -->
+  <!-- <div id="chart" style="height: 400px;"></div> -->
+
+  <!-- <div class="promoRatio_contaier">
+<section class="promoRatio_aggregate">
+    <p class = "promoRatio__aggregation-title">Агрегация выходных данных</p>
+    <label for="promoRatio_geography">Агрегат по географии</label>
+    <select id="promoRatio_geography">
+        <option value="option2">Не установлено</option>
+        <option value="option2">Сеть</option>
+        <option value="option1">Страна</option>
+        <option value="option2">Регион</option>
+        <option value="option2">Город</option>
+        <option value="option2">Магазин</option>
+    </select>
+
+    <label for="promoRatio_groupSCU">По позиции</label>
+    <select id="promoRatio_groupSCU">
+        <option value="option2">Не установлено</option>
+        <option value="option2">Категория</option>
+        <option value="option2">SKU</option>
+    </select>
+
+    <label for="promoRatio_other-indicators">Дополнительные показатели</label>
+    <select id="promoRatio_other-indicators">
+        <option value="option0">Не установлено</option>
+        <option value="option1">ABC</option>
+        <option value="option2">XYZ</option>
+        <option value="option3">Ценовой сегмент</option>
+        <option value="option4">Механика акции</option>
+        <option value="option5">Бренд</option>
+    </select>
+</section>
+
+
+<section class = "promoRatio_calculation">
+    <label for="promoRatio_method">Метод агрегации</label>
+    <select id="promoRatio_method">
+        <option value="promoRatio_method_average">Средняя</option>
+        <option value="promoRatio_method_mediana">Медиана</option>
+    </select>
+
+    <label for="promoRatio_season-smooth">Сглаживание</label>
+    <input type="checkbox" id="promoRatio_season-smooth">
+    <label for="promoRatio_method">Ограничения коэффициентов</label>
+    <div>
+        <label id="label_promoRatio_min" for="promoRatio_min"> MIN <input type="number" value="1" min="1" step="1" max="30" id="promoRatio_min"></label>
+        <label id="label_promoRatio_max" for="promoRatio_max"> MAX <input type="number" value="2" min="1" step="1" max="30" id="promoRatio_max"></label>
+    </div>
+
+    <button onclick="tbPromoRatioPerviewButton()" id="promoRatio__calculateForecastButton">Рассчитать</button>
+    <select id="promoRatio_scenario">
+        <option value="option0">Сохранить прежние настройки</option>
+        <option value="option1">Сценарий 1</option>
+        <option value="option2">Сценарий 2</option>
+        <option value="option3">Сценарий 3</option>
+    </select>
+ 
+        <button  id="promoRatio_exportButton">Экспорт данных</button>
+        <button  id="promoRatio_importButton">Импорт данных</button>
+      
+</section>
+</div> -->
+</div>

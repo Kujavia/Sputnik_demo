@@ -1,0 +1,150 @@
+
+// .promo_container{
+//     display: grid;
+//     grid-template-columns: repeat(2, 30vw);
+//     column-gap: 50px;
+//     // padding-left: 40px; 
+//     padding-top: 20px;
+//     // width: 800px;
+//     .promo__forecast-wrapper{
+//         display: grid;
+//         grid-template-columns: repeat(2, auto);
+//         grid-template-rows: repeat(5, auto);
+//         column-gap: 20px;
+//         .promo_calculate{
+//             grid-column: span 2;
+//             #promo_scenario{
+//                 margin-left: 10px;
+//                 width: 235px;
+//                 height: 30px;
+//             }
+//         }
+//         #promo__calculateForecastButton, #promo__optimizeButton, #promo__exportButton{
+//             width: 200px;
+//             height: 40px;
+//             &:hover{
+//                 background-color: $hover-button;
+//             }
+//         }
+       
+//     }
+// }
+
+// .promo__aggregation-wrapper{
+//     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+//     border: 1px $frame_color2 solid;
+//     width: 100%;
+//     padding: 8px;
+//     // border-radius: 5px;
+//     .promo__aggregation-title{
+//         margin-bottom: 10px;
+//         // margin-left: 23%;
+//         font-weight: 700;
+//         margin-bottom: 10px;
+//         text-align: center;
+
+//     }
+//     .promo__aggregation{
+//         display: grid;
+//         grid-template-columns: repeat(2, auto);
+//         grid-template-rows: repeat(4, auto);
+//         gap: 12px;
+//     }
+// }
+// #promo_PreviewIframe{
+//     grid-column: span 2;
+//     margin-top: 10%;
+//     width: calc(100vw - 350px);
+//     height: 460px;
+// }
+// #promo_scenario, #promo_method{
+//     height: 30px;
+//     width: 100%;
+// }
+
+
+// // .promo_container{
+// //     display: grid;
+// //     grid-template-columns: repeat(2, 300px);
+// //     gap: 10px;
+// //     padding-left: 40px; 
+// //     padding-top: 20px;
+// // }
+
+// // .promo_calculate{
+// //     margin-top: 20px;
+// //     grid-column: span 2;
+// // }
+// // #promo_calculate_forecastButton, #promo_optimizeButton{
+// //     width: 250px;
+// //     background-color: coral;
+// //     border-radius: 5px;
+// //     height: 40px;
+// //     grid-column: span 2;
+// //     margin-left: 10%;
+// //     margin-top: 15px;
+// //     }
+// //     .promo_calculate{
+// //         grid-column: span 2;
+// //         display: flex;
+// //         align-items: center;
+// //         #promo_scenario{
+// //             margin-left: 20px;
+// //             height: 30px;
+// //         }
+// //     }
+    
+// //     #promo_exportButton,#promo_resultsButton,#promo_chartButton{
+// //         width: 150px;
+// //         grid-column: span 2;
+// //         margin: 5px;
+// //         margin-top: 20px;
+// //         border-radius: 5px;
+// //         height: 30px;
+// //     }
+    
+// //     .promo__preview{
+// //         display:flex;
+// //         flex-direction: row;
+// //         margin-top: 20px;
+// //         .promo__results{
+// //             display: flex;
+// //             flex-direction: column;
+// //             #tb_promo_results{
+// //                 width: 900px;
+// //                 height: 350px;
+// //             }
+// //         }
+// //         .promo__chart{
+// //             margin-left: 20px;
+// //             border: 1px lightblue solid;
+// //             border-radius: 15px;
+// //             display: flex;
+// //             flex-direction: column;
+// //           justify-content: center;
+// //             #tb_promo_chart{
+// //                 width: 450px;
+// //             }
+// //         }
+// //     }
+    
+// // .promo__preview{
+// //     display: flex;
+// //     flex-direction: column;
+// //     margin-top: 20px;
+// //     .promo__results{
+// //         display: flex;
+// //         flex-direction: column;
+// //         #promo_resultsButton{
+// //             width: 200px;
+// //             height: 40px;
+// //             margin: 10px;
+// //             background-color: $button_preview_color;
+// //             margin-left: 70%;
+// //             &:hover{
+// //                 background-color: $hover-button;
+// //             }
+// //         }
+     
+// //     }
+// // }
