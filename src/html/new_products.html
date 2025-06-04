@@ -1,0 +1,261 @@
+<div class="page__content page-content data-page">
+  <header class="page-content__header">
+    <p>Новинки</p>
+  </header>
+
+  <div class="row border border-1 rounded-4 mx-1 shadow-sm">
+    <!-- Левый блок: Агрегация выходных данных -->
+    <div class="col-md-6 p-0">
+      <!-- <div class="card"> -->
+      <div class="card-body">
+        <h5 class="card-title block_title mb-3">Настройки расчета новинок</h5>
+
+        <div class="mb-3">
+          <label for="new_product__aggregation-geo" class="form-label">Агрегат по географии</label>
+          <select id="new_product__aggregation-geo" class="form-select">
+            <option value="not_selected">Не установлено</option>
+            <option value="chain" selected>Сеть</option>
+            <option value="option2">Страна</option>
+            <option value="option3">Регион</option>
+            <option value="option4">Город</option>
+            <option value="option5">Магазин</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="new_product__aggregation-group" class="form-label">Агрегат по позиции</label>
+          <select id="new_product__aggregation-group" class="form-select">
+            <option value="newProductParamGroupNot" selected>Не установлено</option>
+            <option value="newProductParamTypeProduct">Категория</option>
+            <option value="newProductParamSku">SKU</option>
+          </select>
+        </div>
+        <div id="additional" class="mb-3">
+          <div class="form-check custom-checkbox ml-1" id="methods-cleaning">
+            <input
+              class="form-check-input main-checkbox"
+              type="checkbox"
+              id="additional-metrics"
+              data-group="metrics"
+            />
+            <label class="form-check-label" for="additional-metrics"
+              >Дополнительные показатели</label
+            >
+          </div>
+          <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+            <input
+              class="form-check-input sub-checkbox"
+              type="checkbox"
+              id="abc-metrics"
+              data-group="metrics"
+            />
+            <label class="form-check-label" for="abc-metrics">ABC</label>
+          </div>
+          <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+            <input
+              class="form-check-input sub-checkbox"
+              type="checkbox"
+              id="xyz-metrics"
+              data-group="metrics"
+            />
+            <label class="form-check-label" for="xyz-metrics">XYZ</label>
+          </div>
+          <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+            <input
+              class="form-check-input sub-checkbox"
+              type="checkbox"
+              id="price-segment"
+              data-group="metrics"
+            />
+            <label class="form-check-label" for="price-segment"
+              >Ценовой сегмент</label
+            >
+          </div>
+          <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+            <input
+              class="form-check-input sub-checkbox"
+              type="checkbox"
+              id="promo-mechanics"
+              data-group="metrics"
+            />
+            <label class="form-check-label" for="promo-mechanics"
+              >Механика акции</label
+            >
+          </div>
+          <div class="form-check custom-checkbox ml-3" id="methods-cleaning">
+            <input
+              class="form-check-input sub-checkbox"
+              type="checkbox"
+              id="brand-metrics"
+              data-group="metrics"
+            />
+            <label class="form-check-label" for="brand-metrics">Бренд</label>
+          </div>
+        </div>
+        <!-- <div class="mb-1">
+          <label for="new_product__aggregation-parameter" class="form-label">Дополнительные показатели</label>
+          <select id="new_product__aggregation-parameter" class="form-select">
+            <option value="newProductAddParamNot" selected>Не установлено</option>
+            <option value="newProductAddParamAbc">ABC</option>
+            <option value="newProductAddParamXyz">XYZ</option>
+            <option value="newProductAddParamPrice">Ценовой сегмент</option>
+            <option value="newProductAddParamMechanicAction">Механика акции</option>
+            <option value="newProductAddParamBrand">Бренд</option>
+          </select>
+        </div> -->
+
+        <div class="row">
+          <div class="col">
+            <div class="input-group mb-3">
+              <span class="input-group-text">Период прогноза</span>
+              <input id="period" type="text" class="form-control" value="4"
+                aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)" />
+              <span class="input-group-text">нед</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group mb-3">
+              <span class="input-group-text">Лаг прогноза</span>
+              <input type="text" class="form-control" value="1"
+                aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)" />
+              <span class="input-group-text">нед</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+
+    <!-- Правый блок: Метод прогнозирования и сценарий расчета -->
+    <div class="col-md-6 d-flex flex-column p-0">
+      <!-- <div class="card"> -->
+      <div class="card-body flex-fill">
+        <!-- <h5 class="card-title block_title mb-3">Настройки</h5> -->
+        <div class="mb-3">
+          <div class="mb-3">
+            <!-- <label for="seasonality_scenario">Выбрать коэффициенты</label>
+            <select
+              id="seasonality_scenario"
+              placeholder="Выберите из списка"
+              class="form-select"
+            >
+              <option value="" disabled selected>Выберите из списка</option>
+              <option value="2">Рассчитанные</option>
+              <option value="2">Пользовательские</option>
+            </select> -->
+            <label for="seasonality_scenario" class="form-label">Сценарий расчета</label>
+            <select id="seasonality_scenario" placeholder="Выберите из списка" class="form-select">
+              <option value="" disabled selected>Выберите из списка</option>
+              <option value="2">Сценарий 1</option>
+              <option value="2">Сценарий 2</option>
+            </select>
+            
+            <div class="row mt-5">
+              <div class="col-4">
+                <button type="button" class="btn btn-outline-primary w-100" _style="width: 31%" onclick="scenariosSaveOpen();" >
+                  Сохранить сценарий
+                </button>
+              </div>
+              <div class="col-4">
+                <button type="button" class="btn btn-outline-secondary w-100" disabled
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  data-bs-custom-class="custom-tooltip"
+                  data-bs-title="В разработке"
+                >
+                  Оптимизировать
+                </button>
+              </div>
+              <div class="col-4">
+                <button type="button" class="btn btn-primary w-100" _style="width: 31%" onclick="loadAndFilterDataNewProducts()" id="new_product__calculateForecastButton">
+                  Рассчитать прогноз
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3"></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row border border-1 rounded-4 mx-1 shadow-sm mt-4 p-3">
+    <!-- Заголовок -->
+    <div class="d-flex justify-content-between align-items-start w-100">
+      <p class="fw-bold mb-0 fs-5">Аналитические показатели</p>
+      <a href="./data/newProducts/newProducts_forecast.xlsx">
+        Скачать
+      </a>
+    </div>
+
+    <!-- iframe -->
+    <iframe id="new_product_PreviewIframe" src="" class="mt-3 w-100" style="height: 400px; border: none"></iframe>
+  </div>
+
+</div>
+<!-- <div class="new_product_container">
+
+    <section class="new_product__aggregation-wrapper">
+        <p class = "new_product__aggregation-title"> Настройки расчёта</p>
+
+        <div class="new_product__aggregation"> 
+
+        <label for="new_product__aggregation-geo">Агрегат по географии</label>
+        <select id="new_product__aggregation-geo">
+            <option value="newProductParamGeoNot" selected> Не установлено</option>
+            <option value="newProductParamGeoChain">Сеть</option>
+            <option value="newProductParamGeoCountry">Страна</option>
+            <option value="newProductParamGeoRegion">Регион</option>
+            <option value="newProductParamGeoCity">Город</option>
+            <option value="newProductParamGeoStore">Магазин</option>
+        </select>
+
+        <label for="new_product__aggregation-group">Агрегат по позиции</label>
+        <select id="new_product__aggregation-group">
+            <option value="newProductParamGroupNot" selected >Не установлено</option>
+            <option value="newProductParamTypeProduct">Категория</option>
+            <option value="newProductParamSku">SKU</option>
+        </select>
+
+        <label for="new_product__aggregation-parameter">Дополнительные показатели</label>
+        <select id="new_product__aggregation-parameter">
+            <option value="newProductAddParamNot" selected>Не установлено</option>
+            <option value="newProductAddParamAbc">ABC</option>
+            <option value="newProductAddParamXyz">XYZ</option>
+            <option value="newProductAddParamPrice">Ценовой сегмент</option>
+            <option value="newProductAddParamMechanicAction">Механика акции</option>
+            <option value="newProductAddParamBrand">Бренд</option>
+        </select>
+    </div>
+    </section>
+
+    <section class="new_product__forecast-wrapper">
+        <p></p>
+        <p></p>
+    
+    <button onclick="loadAndFilterDataNewProducts()" id="new_product__calculateForecastButton">Рассчитать прогноз</button>
+    <select id="new_product_scenario">
+        <option value="option0">Сохранить текущие настройки</option>
+        <option value="option1">Сценарий 1</option>
+        <option value="option2">Сценарий 2</option>
+        <option value="option3">Сценарий 3</option>
+    </select>
+    <button onclick="newProductOptimizationButton()" id="new_product__optimizeButton">Оптимизировать</button>
+    <button id="new_product__exportButton">Экспорт</button>
+</div>
+</section>
+
+<section class="new_product__preview">
+    <div class="new_product__results">
+       
+        <iframe  id="new_product_PreviewIframe" src=""></iframe>
+    </div>
+</section>
+
+<div id="new_product__modal">
+<div id="new_product__modalContent">
+    <h5 class="new_product__modal-title">Выберите параметры оптимизации:</h5>
+    <label><input type="checkbox" name="option1"> Выбор агрегата</label><br>
+    <button onclick="newProductSaveModalButton()" id="newProductSaveModalButton">Сохранить</button>
+    <button onclick="newProductCloseModalButton()" id="newProductCloseModalButton">Закрыть</button>
+</div>
+</div> -->
